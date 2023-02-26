@@ -35,3 +35,5 @@ List<Category> categories = [
   Category('Transportation', 500, _generateExpenses()),
   Category('Housing', 1000, _generateExpenses()),
 ];
+
+final List<String> weekLetterName = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
