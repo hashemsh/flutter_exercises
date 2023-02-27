@@ -41,10 +41,10 @@ class WeeklySpending extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 50.0,
           ),
-          MyBarChart()
+          const MyBarChart()
         ],
       ),
     );

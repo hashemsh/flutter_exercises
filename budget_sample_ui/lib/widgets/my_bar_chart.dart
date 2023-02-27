@@ -66,7 +66,8 @@ class _BarChart extends StatelessWidget {
             barRods: [
               BarChartRodData(
                 toY: item.value.toDouble(),
-                color: Colors.green,
+                color: colorExpression(item.value
+                    .toInt()), // for Show color of high or low Spending for each day
                 width: 18.0,
               )
             ],
@@ -77,6 +78,16 @@ class _BarChart extends StatelessWidget {
         alignment: BarChartAlignment.spaceAround,
       ),
     );
+  }
+}
+
+MaterialColor colorExpression(int item) {
+  if (item > 60) {
+    return Colors.red;
+  } else if (item < 60 && item > 40) {
+    return Colors.orange;
+  } else {
+    return Colors.green;
   }
 }
 
