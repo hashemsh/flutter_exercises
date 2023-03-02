@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'Budget App Ui',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.purple,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
