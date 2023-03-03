@@ -36,6 +36,22 @@ class ScreenB extends StatelessWidget {
               onPressed: () => Get.toNamed(Routes.screenC),
               child: const Text('Go to Screen C'),
             ),
+            const SizedBox(
+              height: 15,
+            ),
+            FilledButton(
+              onPressed: () => Get.snackbar(
+                'this is title',
+                'message for modern snackbar',
+                icon: const Icon(
+                  Icons.mark_email_unread_sharp,
+                  color: Colors.white,
+                ),
+                colorText: Colors.white,
+                backgroundColor: Colors.deepPurple,
+              ),
+              child: const Text('Modern Snackbar'),
+            ),
           ],
         ),
       ),
