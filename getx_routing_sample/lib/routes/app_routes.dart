@@ -5,6 +5,8 @@ import 'package:getx_routing_sample/screens/screen_a.dart';
 import 'package:getx_routing_sample/screens/screen_b.dart';
 import 'package:getx_routing_sample/screens/screen_c.dart';
 
+import '../middleware/auth_guard.dart';
+
 class Routes {
   static const String home = "/";
   static const String screenA = "/ScreenA";
@@ -31,6 +33,7 @@ List<GetPage> appRoutes() => [
       ),
       GetPage(
         name: Routes.screenC,
+        middlewares: [AuthGuard()],
         page: () => const ScreenC(),
         transition: Transition.downToUp,
       ),
