@@ -22,17 +22,21 @@ List<GetPage> appRoutes() => [
       GetPage(
         name: Routes.screenA,
         page: () => const ScreenA(),
+        transition: Transition.leftToRightWithFade,
       ),
       GetPage(
         name: Routes.screenB,
         page: () => const ScreenB(),
+        transition: Transition.cupertino,
       ),
       GetPage(
         name: Routes.screenC,
         page: () => const ScreenC(),
+        transition: Transition.downToUp,
       ),
       GetPage(
         name: Routes.login,
         page: () => const LoginScreen(),
+        transition: Transition.zoom,
       )
     ];

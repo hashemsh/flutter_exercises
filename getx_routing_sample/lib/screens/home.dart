@@ -7,6 +7,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Map<String, String> parametersB = {
+      "title": "Screen B",
+      "body": "text from Parameters Get Routing",
+    };
+
+    Map<String, Object> argumentA = {
+      'title': 'Screen A - Title from Argument',
+      'color': Colors.blueAccent.shade100
+    };
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Screen'),
@@ -32,10 +42,8 @@ class HomeScreen extends StatelessWidget {
               height: 15,
             ),
             FilledButton(
-              onPressed: () => Get.toNamed(Routes.screenA, arguments: {
-                'title': 'Screen A - Title from Argument',
-                'color': Colors.blueAccent.shade100
-              }),
+              onPressed: () =>
+                  Get.toNamed(Routes.screenA, arguments: argumentA),
               child: const Text('Go to Screen A'),
             ),
             const SizedBox(
@@ -45,7 +53,8 @@ class HomeScreen extends StatelessWidget {
               style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(Colors.purpleAccent),
               ),
-              onPressed: () => Get.toNamed(Routes.screenB),
+              onPressed: () =>
+                  Get.toNamed(Routes.screenB, parameters: parametersB),
               child: const Text('Go to Screen B'),
             ),
             const SizedBox(
