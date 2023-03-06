@@ -23,3 +23,11 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//TODO 
+
+// - fix Author and link for Each News 
+
+
+//FIXME change API key 
+
