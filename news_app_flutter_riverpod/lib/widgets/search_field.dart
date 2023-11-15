@@ -10,7 +10,7 @@ class SearchField extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    Debouncer _debouncer = Debouncer();
+    Debouncer debouncer = Debouncer();
     return Container(
       margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
       decoration: BoxDecoration(boxShadow: [
@@ -21,7 +21,7 @@ class SearchField extends ConsumerWidget {
       ]),
       child: TextField(
         onChanged: (value) {
-          _debouncer.run(() {
+          debouncer.run(() {
             if (value.isNotEmpty) {
               ref.read(newsProvider.notifier).loadSearchedNews(value);
             } else {
